@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ACTIVIDAD EJERCICIO 2</title>
+	
+</head>
+<body>
+<script>
+// Calcular el interés de una cuenta de ahorros al final del año
+// Cuenta genera 15% de interés anual, o 1.25% mensual
+// El pago inicial se realiza en enero, se agregan 250 cada mes
+//Daniel Rodriguez
+let inicial = parseFloat(prompt("Cual es el pago inicial?"));
+let mensual = 250;
+let total = inicial;
+let interestotal = 0;
+
+for (let i = 1; i <= 11; i++) {
+  // calcular el interes mensual
+  let interes = total * 0.0125;
+  interestotal = interes + interestotal;
+
+  // Añadir el interés
+  total += interes;
+
+  // Añadir el depósito mensual
+  total += mensual;
+}
+
+// Salida de la cantidad total al final del año
+document.write("Interes total: " + interestotal.toFixed(2) + "$");
+document.write("<br><br>Monto total al final del año: " + total.toFixed(2) + "$");
+</script>
+</body>
+</html>
